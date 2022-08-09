@@ -16,4 +16,4 @@ docker-php-ext-configure gd --with-freetype-dir=/usr/include
 #### linux
 
 1. 查看cpu占用最多的进程
- ps aux|head-1;ps aux | grep -v PID | sort -rn -k +3 | head -1
+ ps aux|head -1;ps aux | grep -v PID | sort -rn -k +3 | head -1
