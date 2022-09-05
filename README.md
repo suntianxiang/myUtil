@@ -20,3 +20,9 @@ docker-php-ext-configure gd --with-freetype-dir=/usr/include
 
 #### nginx
 1. 切割日志 mv /www/wwwlogs/18.231.158.226.log /www/wwwlogs/backup/18.231.158.226_20220811.log && kill -USR1 1447 （1447：nginx主线程）
+
+#### 查看连接状态
+netstat -na | awk '{print $6}' | sort | uniq -c | sort -nr
+lsof -p 8100
+
+#### 
