@@ -25,4 +25,5 @@ docker-php-ext-configure gd --with-freetype-dir=/usr/include
 netstat -na | awk '{print $6}' | sort | uniq -c | sort -nr
 lsof -p 8100
 
-#### 
+#### 查看每个ip建立的连接数
+netstat -nat| awk '{print$5}' | awk -F : '{print$1}' | sort | uniq -c | sort -rn
