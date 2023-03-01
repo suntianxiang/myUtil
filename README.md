@@ -30,4 +30,4 @@ docker-php-ext-configure gd --with-freetype-dir=/usr/include
 netstat -nat| awk '{print$5}' | awk -F : '{print$1}' | sort | uniq -c | sort -rn
 
 #### ssh sock5 proxy连接
-ssh -o ProxyCommand='nc -x 127.0.0.1:1086 %h %p' centos@18.231.37.64 -i ~/Downloads/br3_web.pem
+ssh -o ProxyCommand='nc -x 127.0.0.1:1086 %h %p' centos@127.0.0.1 -i ~/Downloads/br3_web.pem
